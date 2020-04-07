@@ -17,8 +17,8 @@ class User extends Model {
 
 	protected $fields = [
 		"iduser", "idperson", "deslogin", "despassword", 
-		"desemail", "nrphone", "inadmin", "dtergister", 
-		"desperson"
+		"desemail", "nrphone", "inadmin", "dtregister", 
+		"desperson", "idcategory", "descategory"
 	];
 
 	public static function login($login, $password):User
