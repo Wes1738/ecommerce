@@ -58,7 +58,7 @@ class Product extends Model {
 		$sql = new Sql();
 
 		$results = $sql->select("SELECT * FROM tb_products WHERE idproduct = :idproduct", [
-			':idproduct'=>$idproduct
+			':idproduct' => $idproduct
 		]);
 
 		$this->setData($results[0]);
