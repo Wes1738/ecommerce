@@ -20,4 +20,20 @@ function get($key)
 	return str_replace("'", "", $_GET[$key]);
 }
 
+function checkLogin($inadmin = true)
+{
+
+	return User::checkLogin($inadmin);
+
+}
+
+function getUserName()
+{
+
+	$user = User::getFromSession();
+
+	return $user->getdesperson();
+
+}
+
  ?>
