@@ -21,6 +21,13 @@ function get($key)
 	return str_replace("'", "", $_GET[$key]);
 }
 
+function formatDate($date)
+{
+
+	return date('d/m/Y', strtotime($date));
+
+}
+
 function checkLogin($inadmin = true)
 {
 
