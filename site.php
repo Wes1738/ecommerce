@@ -10,8 +10,8 @@ use \Hcode\Model\Order;
 use \Hcode\Model\OrderStatus;
 
 $app->get('/', function() {
-    
-    $products = Product::listAll();
+
+	$products = Product::listAll();
 
 	$page = new Page();
 
@@ -47,7 +47,7 @@ $app->get("/categories/:idcategory", function($idcategory){
 		'products'=>$pagination["data"],
 		'pages'=>$pages
 	]);
-	
+
 });
 
 $app->get("/products/:desurl", function($desurl){
@@ -145,23 +145,6 @@ $app->get("/checkout", function(){
 
 	User::verifyLogin(false);
 
-	$cart = Cart::getFromSession();
-
-	$address = new Address();
-
-	$page = new Page();
-
-	$page->setTpl("checkout", [
-		'cart'=>$cart->getValues(),
-		'address'=>$address->getValues()
-	]);
-
-});
-
-$app->get("/checkout", function(){
-
-	User::verifyLogin(false);
-
 	$address = new Address();
 	$cart = Cart::getFromSession();
 
@@ -231,13 +214,13 @@ $app->post("/checkout", function(){
 	}
 
 	if (!isset($_POST['desstate']) || $_POST['desstate'] === '') {
-		Address::setMsgError("Informe o Estado.");
+		Address::setMsgError("Informe o estado.");
 		header('Location: /checkout');
 		exit;
 	}
 
 	if (!isset($_POST['descountry']) || $_POST['descountry'] === '') {
-		Address::setMsgError("Informe o País.");
+		Address::setMsgError("Informe o país.");
 		header('Location: /checkout');
 		exit;
 	}
@@ -252,7 +235,7 @@ $app->post("/checkout", function(){
 	$address->setData($_POST);
 
 	$address->save();
-	
+
 	$cart = Cart::getFromSession();
 
 	$totals = $cart->getCalculateTotal();
@@ -281,8 +264,7 @@ $app->get("/login", function(){
 	$page->setTpl("login", [
 		'error'=>User::getError(),
 		'errorRegister'=>User::getErrorRegister(),
-		'registerValues'=>(isset($_SESSION['registerValues'])) ? $_SESSION['registerValues'] : ['name'=>'', 'email'=>'',
-		'phone'=>'']
+		'registerValues'=>(isset($_SESSION['registerValues'])) ? $_SESSION['registerValues'] : ['name'=>'', 'email'=>'', 'phone'=>'']
 	]);
 
 });
@@ -480,7 +462,7 @@ $app->post("/profile", function(){
 
 	$user->setData($_POST);
 
-	$user->update();
+	$user->save();
 
 	User::setSuccess("Dados alterados com sucesso!");
 
@@ -576,4 +558,4 @@ $app->get("/boleto/:idorder", function($idorder){
 
 });
 
-?>
+ ?>
