@@ -248,6 +248,7 @@ class Cart extends Model {
 		} else {
 
 
+
 		}
 
 	}
@@ -314,7 +315,7 @@ class Cart extends Model {
 
 		$this->setvlsubtotal($totals['vlprice']);
 		$this->setvltotal($totals['vlprice'] + (float)$this->getvlfreight());
-		
+
 	}
 
 }
