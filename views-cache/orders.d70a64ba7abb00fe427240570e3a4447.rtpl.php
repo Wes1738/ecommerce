@@ -18,7 +18,7 @@
   	<div class="col-md-12">
   		<div class="box box-primary">
 
-         <div class="box-header">
+          <div class="box-header">
             <div class="box-tools">
                 <form action="/admin/orders">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -48,8 +48,8 @@
                   <tr>
                     <td><?php echo htmlspecialchars( $value1["idorder"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td><?php echo htmlspecialchars( $value1["desperson"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                    <td>R$<?php echo format_real($value1["vltotal"]); ?></td>
-                    <td>R$<?php echo format_real($value1["vlfreight"]); ?></td>
+                    <td>R$<?php echo formatPrice($value1["vltotal"]); ?></td>
+                    <td>R$<?php echo formatPrice($value1["vlfreight"]); ?></td>
                     <td><?php echo htmlspecialchars( $value1["desstatus"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                     <td>
                       <a href="/admin/orders/<?php echo htmlspecialchars( $value1["idorder"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" class="btn btn-default btn-xs"><i class="fa fa-search"></i> Detalhes</a>
