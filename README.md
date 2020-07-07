@@ -11,17 +11,8 @@ Template usado no projeto [Almsaeed Studio](https://almsaeedstudio.com)
 ### Minha Conta
 ![Gif2 - Minha Conta](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/gifsHcodeComerce2.gif)
 
-### Carrinho de Compras
-![Gif3 - Carrinho de Compras](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/gifsHcodeComerce3.gif)
-
-### Carrinho + Cálculo de Frete
-![Gif4 - Cálculo de Frete](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/gifsHcodeComerce4.gif)
-
-### Checkout e Formas de Pagamento
-![Gif5 - Checkout e Formas de Pagamento](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/gifsHcodeComerce5.gif)
-
-### Categorias e Produtos
-![Gif6 - Categorias e Produtos](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/gifsHcodeComerce6.gif)
-
 ### Painel Administrativo
 ![Gif7 - Painel Administrativo](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/Administrativo.gif)
+
+### Outros Gifs do Projeto
+[Demais Gifs](https://github.com/Wes1738/ecommerce/blob/master/Gifs%20Hcode%20Commerce/)
